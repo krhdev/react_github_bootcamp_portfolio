@@ -1,3 +1,14 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-content {
+  flex: 1;
+  padding: 2rem 1.5rem 4rem;
+}
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;
@@ -181,4 +192,203 @@
     right: 0;
     border-right-color: var(--border);
   }
+}
+
+.see-all-link {
+  color: var(--text-h);
+  border: 2px solid var(--accent);
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.see-all-link:hover {
+  background-color: var(--accent);
+  color: #ffffff;
+}
+
+/* --- Header layout --- */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background-color: var(--text-h);
+  position: relative;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+}
+
+/* --- Nav links (desktop default: visible, inline) --- */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* --- Hamburger button (hidden on desktop) --- */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.75rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* --- Mobile breakpoint --- */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--text-h);
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+}
+
+.site-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.copyright {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.github-icon {
+  fill: #ffffff;
+  transition: fill 0.2s ease;
+}
+
+.github-icon:hover {
+  fill: var(--accent);
+}
+
+/* --- Project Gallery grid --- */
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* --- Individual card --- */
+.project-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.project-screenshot {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card-content {
+  padding: 1.25rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.project-card-content h3 {
+  margin: 0;
+  color: var(--text-h);
+  font-size: 1.2rem;
+}
+
+.project-card-content p {
+  color: var(--text);
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+.project-language {
+  display: inline-block;
+  align-self: flex-start;
+  background-color: var(--accent-bg);
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+.project-link {
+  color: var(--text-h);
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 0.5rem;
+}
+
+.project-link:hover {
+  color: var(--accent);
+}
+
+.skills-section,
+.featured-projects {
+  margin-top: 2.5rem;
+}
+
+.skills-section h2,
+.featured-projects h2 {
+  margin-bottom: 0.5rem;
+}
+
+.github-bio {
+  margin-bottom: 1rem;
 }
