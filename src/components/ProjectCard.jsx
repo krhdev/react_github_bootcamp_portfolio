@@ -1,4 +1,4 @@
-function ProjectCard({ name, description, url, screenshot, language }) {
+function ProjectCard({ name, description, url, liveUrl, screenshot, language }) {
   return (
     <div className="project-card">
       <img
@@ -10,9 +10,16 @@ function ProjectCard({ name, description, url, screenshot, language }) {
         <h3>{name}</h3>
         <p>{description || 'No description provided.'}</p>
         {language && <span className="project-language">{language}</span>}
-        <a href={url} target="_blank" rel="noopener noreferrer" className="project-link">
-          View on GitHub →
-        </a>
+        <div className="project-links">
+          <a href={url} target="_blank" rel="noopener noreferrer" className="project-link">
+            GitHub →
+          </a>
+          {liveUrl && (
+            <a href={liveUrl} target="_blank" rel="noopener noreferrer" className="project-link">
+              Live Preview →
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );

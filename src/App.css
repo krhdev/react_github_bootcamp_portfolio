@@ -392,3 +392,9 @@
 .github-bio {
   margin-bottom: 1rem;
 }
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
