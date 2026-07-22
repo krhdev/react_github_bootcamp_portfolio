@@ -11,7 +11,7 @@ import todoImg from '../assets/screenshots/todo.png';
 import weatherWearImg from '../assets/screenshots/weather_wear_collab.png';
 
 // Add repo names here (exactly as they appear on GitHub) to hide them from the gallery
-const excludedRepos = ['brackets', 'krhdev', 'gitstash', 'downloadsort', 'StarWarsFlix', 'todo', 'notes', 'bootcamp26', 'box-office', 'Python_to_do', 'react_github_bootcamp_portfolio'];
+const excludedRepos = ['brackets', 'krhdev', 'gitstash', 'downloadsort', 'StarWarsFlix', 'todo', 'notes', 'bootcamp26', 'box-office', 'Python_to_do', 'mytictactoe'];
 
 // Add repo names here to show contributors on their card
 const collabRepos = ['Darkside_Coders_CollabApp'];

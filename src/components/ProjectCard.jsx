@@ -55,11 +55,11 @@ function ProjectCard({ name, description, url, liveUrl, screenshot, language, is
 
         <div className="project-links">
           <a href={url} target="_blank" rel="noopener noreferrer" className="project-link">
-            GitHub →
+            GitHub
           </a>
           {liveUrl && (
             <a href={liveUrl} target="_blank" rel="noopener noreferrer" className="project-link">
-              Live Preview →
+              Live Preview 
             </a>
           )}
         </div>
